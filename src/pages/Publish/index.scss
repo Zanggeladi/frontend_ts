@@ -1,0 +1,18 @@
+.publish {
+  position: relative;
+}
+
+.ant-upload-list {
+  .ant-upload-list-picture-card-container,
+  .ant-upload-select {
+    width: 146px;
+    height: 146px;
+  }
+}
+
+//想修改一个第三方组件的样式时，可以在浏览器审查元素。elements中，可以找到具体的第三方组件内部的小组件叫什么类名
+.publish-quill {
+  .ql-editor {
+    min-height: 300px;
+  }
+}
