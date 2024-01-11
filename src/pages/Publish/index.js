@@ -25,10 +25,13 @@ const Publish = () => {
     //获取频道列表并完成渲染
     const [channelList, setChannelList] = useState([])
     useEffect(() => {
-        const getChannelList = () => {
-            const res = getChannelAPI()
-            console.log(res)
-            // setChannelList(res.data)
+        const getChannelList = async () => {
+            const res = await getChannelAPI()
+            // console.log(res)
+            // console.log(res.data)
+            if(res){
+                setChannelList(res.data.channels)
+            }
         }
         getChannelList()
     })
@@ -62,7 +65,8 @@ const Publish = () => {
                         rules={[{ required: true, message: '请选择文章频道' }]}
                     >
                         <Select placeholder="请选择文章频道" style={{ width: 400 }}>
-                            <Option value={0}>推荐</Option>
+                            {/*用户选中某项之后，会收集起value属性的值*/}
+                            {channelList.map(item => <Option key={item.id} value={item.id}>{item.name}</Option>)}
                         </Select>
                     </Form.Item>
                     <Form.Item

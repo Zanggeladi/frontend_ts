@@ -4,7 +4,7 @@
 const TOKENKEY = 'token_key'
 
 function setToken (token) {
-    console.log('存储了token')
+    // console.log('存储了token')
     return localStorage.setItem(TOKENKEY, token)
 }
 

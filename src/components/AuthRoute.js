@@ -12,7 +12,7 @@ function AuthRoute({children}){
         return <>{children}</>
     }else{
         //强制跳转回登录界面
-        console.log('发生了一次强制跳转')
+        // console.log('发生了一次强制跳转')
         return <Navigate to={'/login'} replace />
     }
 }

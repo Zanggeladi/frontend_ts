@@ -74,7 +74,7 @@ const GeekLayout = () => {
     const userName = useSelector(state => state.user.userInfo.name)
 
     const onConfirm = () =>{
-        console.log('确认退出')
+        // console.log('确认退出')
         dispatch(clearUserInfo())
         navigate('/login')
     }

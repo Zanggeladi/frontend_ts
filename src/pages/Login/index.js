@@ -9,10 +9,10 @@ const Login = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const onFinish = (values) =>{
-        console.log(values)
+        // console.log(values)
         //触发异步action fetchLogin
         dispatch(fetchLogin(values)).then(() =>{
-            console.log('尝试跳转')
+            // console.log('尝试跳转')
             //1.跳转到首页
             navigate('/')
             //2.提示登录成功
