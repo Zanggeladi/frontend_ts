@@ -10,3 +10,12 @@ export function getChannelAPI(){
     })
 }
 
+//2.创建文章，提交收集到的表单数据
+export function createArticleAPI(data){
+    return request({
+        url:'/mp/articles',
+        method:'POST',
+        data
+    })
+}
+
